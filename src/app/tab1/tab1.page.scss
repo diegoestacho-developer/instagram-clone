@@ -1,0 +1,60 @@
+ion-content ion-toolbar {
+  --background: translucent;
+  padding: 0px;
+}
+
+ion-title {
+  font-weight: 600;
+}
+
+ion-thumbnail {
+  width: auto;
+  height: auto;
+}
+
+ion-label {
+  font-weight: 600;
+}
+
+ion-button {
+  ion-icon {
+    font-size: 1.7rem;
+  }
+  clear: right;
+  margin-right: -15px;
+}
+
+.ion-align-self-start {
+  align-self: flex-start !important;
+  margin-left: -11px;
+}
+
+.ion-align-self-end {
+  align-self: flex-end !important;
+  margin-left: 11px;
+}
+
+h6 {
+  font-size: 1.0rem;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+p {
+  margin-bottom: 3px;
+  margin-top: 10px;
+  white-space: pre-line;
+  text-align: left;
+}
+
+h5 {
+  margin-top: 0px;
+  font-size: 0.9rem;
+  margin-left: 20px;
+  color: #A4A4A4;
+}
+
+.item-post {
+  margin-top: -20px;
+}
+

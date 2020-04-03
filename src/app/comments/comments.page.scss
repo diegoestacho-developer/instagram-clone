@@ -1,0 +1,39 @@
+ion-label {
+   p {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+      margin-bottom: 2px;
+      font-size: 14px;
+      line-height: 15px;
+      text-overflow: clip;
+      overflow: auto;
+      white-space: pre-line;
+      text-align: start;
+   }
+
+   h6 {
+      float: left;
+      margin-top: 5px;
+      font-size: 0.8rem;
+      color: #BDBDBD;
+   }
+
+   h3 {
+      font-weight: 700;
+   }
+}
+
+ion-avatar {
+   margin-top: -180px;
+}
+
+.user-logged-avatar {
+   margin-top: 5px;
+}
+
+ion-button {
+   ion-icon {
+      font-size: 1.8rem;
+   }
+}

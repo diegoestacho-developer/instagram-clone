@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button color="dark" start>
+        <ion-icon slot="icon-only" name="camera-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Instagram</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="dark" end>
+        <ion-icon slot="icon-only" name="send-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item-group *ngFor="let post of posts">
+      <ion-item lines="none">
+        <ion-avatar slot="start">
+          <img src="{{post.profilePhoto}}">
+        </ion-avatar>
+        <ion-label>{{post.user}}</ion-label>
+        <ion-button color="dark" fill="clear" slot="end">
+          <ion-icon name="ellipsis-vertical"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-thumbnail>
+        <img src="{{post.photo}}">
+      </ion-thumbnail>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="10" class="ion-align-self-start">
+            <ion-button fill="clear" color="dark">
+              <ion-icon name="heart-outline"></ion-icon>
+            </ion-button>
+            <ion-button fill="clear" color="dark">
+              <ion-icon name="chatbubble-outline"></ion-icon>
+            </ion-button>
+            <ion-button fill="clear" color="dark">
+              <ion-icon name="send-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+          <ion-col size="2" class="ion-align-self-end">
+            <ion-button fill="clear" color="dark">
+              <ion-icon name="bookmark-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-item lines="none" class="item-post">
+        <h6 slot="start">
+          {{post.user}}
+        </h6>
+        <p>
+          {{post.title}}
+        </p>
+      </ion-item>
+      <h5 [routerLink]="['/comments']" [queryParams]="{ idPost: post.id }" routerDirection="forward">Ver todos os
+        comentários</h5>
+    </ion-item-group>
+  </ion-list>
+</ion-content>

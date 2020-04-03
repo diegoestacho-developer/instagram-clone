@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button>
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Comentários</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon name="send-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let comment of comments">
+      <ion-avatar slot="start">
+        <img src="{{comment.profilePhoto}}">
+      </ion-avatar>
+      <ion-label>
+        <h3>{{comment.user}}</h3>
+        <p>{{comment.comment}}</p>
+        <h6>{{comment.time}}</h6>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item>
+      <ion-avatar slot="start" class="user-logged-avatar">
+        <img src="../../assets/imgs/avengers_03.jpg">
+      </ion-avatar>
+      <ion-input placeholder="Adicione um comentário..."></ion-input>
+      <ion-button color="tertiary" fill="clear" slot="end">
+        Publicar
+      </ion-button>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>
